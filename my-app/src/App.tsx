@@ -1,12 +1,25 @@
-import React from 'react';
-import './App.css';
+import { FC } from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Contacts } from './components/Routes/Contacts/contacts';
+import { FAQ } from './components/Routes/FAQ/faq';
+import { Home } from "./components/Routes/Home/home";
+import { Posts } from "./components/Routes/Posts/posts";
 
-function App() {
+export const App: FC = () => {
   return (
-    <div className="App">
-      dfghf
-    </div>
-  );
+    <BrowserRouter>
+      <div>
+        <Link to="posts">Posts</Link>
+        <Link to="/">Home</Link>
+        <Link to="contacts">Contacts</Link>
+        <Link to="faq">FAQ</Link>
+      </div>
+      <Routes>
+        <Route path="posts" element={<Posts />} />
+        <Route index element={<Home />} />
+        <Route path='contacts' element={<Contacts />} />
+        <Route path='faq' element={<FAQ />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
-
-export default App;
