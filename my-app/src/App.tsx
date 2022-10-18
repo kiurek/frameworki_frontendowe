@@ -4,16 +4,18 @@ import { Contacts } from './components/Routes/Contacts/contacts';
 import { FAQ } from './components/Routes/FAQ/faq';
 import { Home } from "./components/Routes/Home/home";
 import { Posts } from "./components/Routes/Posts/posts";
+import styled from "styled-components"
+import { Menu } from './components/Common/Menu';
 
 export const App: FC = () => {
   return (
     <BrowserRouter>
-      <div>
+      <Wrapper>
         <Link to="posts">Posts</Link>
         <Link to="/">Home</Link>
         <Link to="contacts">Contacts</Link>
         <Link to="faq">FAQ</Link>
-      </div>
+      </Wrapper>
       <Routes>
         <Route path="posts" element={<Posts />} />
         <Route index element={<Home />} />
