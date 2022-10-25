@@ -1,9 +1,12 @@
 import {FC} from 'react';
+import { Layout } from '../../Common/Layout';
+import { Menu} from '../../Common/Menu';
+import { Wrapper } from '../../Common/Layout';
 
 export const Home: FC = () => {
   return (
-    <div>
-      <h1>This is the home page</h1>
-    </div>
+    <Wrapper>
+
+    </Wrapper>
   );
 }

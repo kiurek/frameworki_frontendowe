@@ -6,13 +6,15 @@ import { Home } from "./components/Routes/Home/home";
 import { Posts } from "./components/Routes/Posts/posts";
 import styled from "styled-components"
 import { Menu } from './components/Common/Menu';
+import { Layout } from './components/Common/Layout';
+import { Wrapper } from './components/Common/Layout';
 
 export const App: FC = () => {
   return (
     <BrowserRouter>
       <Wrapper>
-        <Link to="posts">Posts</Link>
         <Link to="/">Home</Link>
+        <Link to="posts">Posts</Link>
         <Link to="contacts">Contacts</Link>
         <Link to="faq">FAQ</Link>
       </Wrapper>
